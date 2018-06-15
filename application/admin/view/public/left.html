@@ -1,0 +1,48 @@
+
+<div class="layui-side layui-bg-black" id="SiteSidebar">
+            <div class="layui-side-scroll">
+                <ul class="layui-nav layui-nav-tree" lay-filter="test" id="left1">
+                    <li class="layui-nav-item layui-nav-itemed"><a href="javascript:;">学生管理</a>
+                        <dl class="layui-nav-child">
+                            <dd>
+                                <a href="{:url('student/lst')}"><i class="layui-icon">&#xe63a;</i> 学生信息</a></dd>
+                           
+                        </dl>
+                          <dl class="layui-nav-child">
+                            <dd>
+                                <a href="{:url('sc/lst')}"><i class="layui-icon">&#xe63a;</i> 选课信息</a></dd>
+                           
+                        </dl>
+                    
+                    </li>
+                    <li class="layui-nav-item layui-nav-itemed"><a href="javascript:;">教师管理</a>
+                        <dl class="layui-nav-child">
+                            <dd>
+                                <a href="{:url('teacher/lst')}"><i class="layui-icon">&#xe63a;</i> 教师信息</a></dd>
+                          
+                        </dl>
+                    </li>
+                     <li class="layui-nav-item layui-nav-itemed"><a href="javascript:;">课程管理</a>
+                        <dl class="layui-nav-child">
+                            <dd>
+                                <a href="{:url('course/lst')}"><i class="layui-icon">&#xe606;</i>
+                                    课程信息</a></dd>
+                            
+                        </dl>
+                    </li>
+                    <li class="layui-nav-item layui-nav-itemed"><a href="javascript:;">管理员管理</a>
+                        <dl class="layui-nav-child">
+                            <dd>
+                                <a href="{:url('admin/lst')}"><i class="layui-icon">&#xe63a;</i> 管理员信息</a></dd>
+                            
+                        </dl>
+                    </li>
+                   
+                </ul>
+                <ul class="layui-nav layui-nav-tree" lay-filter="test" id="left2" style="display: none;">
+                    
+                   
+                   
+                </ul>
+            </div>
+        </div>

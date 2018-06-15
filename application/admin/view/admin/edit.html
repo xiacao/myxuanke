@@ -1,0 +1,64 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>选课管理系统</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link rel="shortcut icon" href="__ADMIN__/images/favicon.ico" type="image/x-icon" />
+    
+    <link rel="stylesheet" href="__ADMIN__/layui/css/layui.css" media="all">
+    <script src="__ADMIN__/js/jquery-1.12.4.js" type="text/javascript"></script>
+     <script src="__ADMIN__/layui/layui.js" charset="utf-8"></script>
+    <link rel="stylesheet" href="__ADMIN__/css/myCss.css">
+  
+   
+  
+</head>
+
+<body>
+    <div class="layui-layout layui-layout-admin">
+        <!--头部-->
+       {include file="public/top" /} 
+        <!--头部END-->
+        <!--侧栏-->
+        {include file="public/left" /} 
+        <!--侧栏END-->
+        <!--内容-->
+        <div class="layui-body layui-tab-content" id="connn" style="bottom: 0px;">
+             
+
+                <span class="layui-breadcrumb">
+                    <a href="{:url('index/index')}">首页</a>
+                    <a href="{:url('admin/lst')}">管理员信息</a>
+                    <a href="#"><cite>管理员修改</cite></a>
+                </span>
+                <br><br>
+
+
+
+
+
+        <form class="layui-form" role="form" action="" method="post">
+            <div class="layui-form-item">
+                <label class="layui-form-label ">登陆名称</label>
+                <div class="layui-input-block " style="width: 40%">
+                     <input type="text" name="name" lay-verify="title" autocomplete="off"  value="{$admins.aname}"  placeholder="请输入登录名称" class="layui-input">
+                </div>
+            </div>
+            <div class="layui-form-item ">
+                <label class="layui-form-label">密码</label>
+                <div class="layui-input-block" style="width: 40%">
+                    <input type="text" name="password" lay-verify="title" autocomplete="off" value="{$admins.password}" placeholder="请输入密码" class="layui-input">
+                </div>
+            </div>
+          
+            <div class="layui-form-item">
+                <div class="layui-input-block">
+                    <button class="layui-btn" lay-submit="" lay-filter="demo1"> 立即提交</button>
+                  
+                </div>
+            </div>
+        </form>
+        </div>
+</body>
+</html>

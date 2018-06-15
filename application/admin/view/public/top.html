@@ -1,0 +1,66 @@
+  <script type="text/javascript">
+
+        function ShowHiddenLeft() {
+
+            var sideWidth = $('#SiteSidebar').width();
+            if (sideWidth === 200) {
+                $('#connn').animate({
+                    left: '0'
+                });
+                $('#SiteSidebar').animate({
+                    width: '0'
+                });
+            } else {
+                $('#connn').animate({
+                    left: '200px'
+                });
+                $('#SiteSidebar').animate({
+                    width: '200px'
+                });
+            }
+        }
+
+        layui.use(['element', 'layer'], function () {
+            var element = layui.element()
+            , layer = layui.layer;
+            if ($("#myiframe").css("height") == "150px") {
+                $("#connn").css("height", "781px")
+            }
+        });
+        //跳转iframe
+        function ChangePage(strStr) {
+            $("#myiframe").attr("src", strStr);
+        }
+
+        function switchMy(num) {
+            $("[lay-filter='test']").hide();
+            $("#left" + num).show();
+        }
+
+    </script>
+
+
+ <div class="layui-header ymheader" style="background: #393d49;">
+            <a href="javascript:" class="logo"><i class="layui-icon" style="font-size: 42px;">&#xe62e;</i>
+                选课管理系统</a>
+            <button class="layui-btn layui-btn-mini MyYinCang" title="隐藏/显示" onclick="javascript:ShowHiddenLeft()">
+                〓</button>
+            <ul class="layui-nav" style="float: right;">
+                <li class="layui-nav-item layui-this"><a href="javascript:switchMy(1);">选课管理</a>
+                </li>
+              
+                <li class="layui-nav-item "><a href="javascript:;" class="admin-header-user">
+                    <img src="__ADMIN__/images/Head.jpg" width="40" height="40" class="layui-circle" />
+                    <span>&nbsp;{$Request.session.aname}</span></a>
+                    <dl class="layui-nav-child">
+                        <dd>
+                            <a href="{:url('admin/edit',array('id'=>$Request.session.id))}"><i class="layui-icon">&#xe612;</i>
+                                管理员管理</a>
+                        </dd>
+                        <dd>
+                            <a href="{:url('admin/logout')}"><i class="layui-icon">&#xe609;</i> 注销</a>
+                        </dd>
+                    </dl>
+                </li>
+            </ul>
+        </div>
